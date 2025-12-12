@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Quartos — Grand Palace Hotel</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header"><div class="container-hr"><div class="brand-inline">
+    <h3 class="brand-name">Quartos</h3>
+    </div>
+    <nav class="main-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="guests.html">Hóspedes</a>
+        <a href="reservas.html">Reservas</a>
+        <a class="btn-link" href="#" onclick="app && app.logout()">Sair</a>
+    </nav>
+</div>
+</header>
+  <main>
+    <section class="container-hr">
+      <h2>Gerenciar Quartos</h2>
+      <form id="roomForm">
+        <input type="hidden" id="roomId" name="roomId">
+        <label>Título</label>
+        <input id="roomTitle" name="roomTitle" required>
+        <label>Preço (R$)</label>
+        <input id="roomPrice" name="roomPrice" type="number" required>
+        <label>Descrição</label>
+        <input id="roomMeta" name="roomMeta">
+        <div style="margin-top:12px">
+        <button class="btn primary full" type="submit">Salvar quarto</button>
+        </div>
+      </form>
+
+      <h3 style="margin-top:18px">Lista de quartos</h3>
+      <div class="card" style="padding:12px;overflow:auto">
+        <table style="width:100%;border-collapse:collapse">
+          <thead><tr><th>ID</th><th>Título</th><th>Preço</th><th>Descrição</th><th>Ações</th></tr></thead>
+          <tbody id="roomsBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container-hr">© 2025 Grand Palace Hotel</div></footer>
+  <script src="js/app.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', ()=> window.app && window.app.initRooms());</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Reservas — Grand Palace Hotel</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container-hr">
+    <div class="brand-inline">
+    <h3 class="brand-name">Reservas</h3>
+    </div>
+    <nav class="main-nav">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="Usuarios.html">Hóspedes</a>
+    <a href="Quartos.html">Quartos</a>
+    <a class="btn-link" href="#" onclick="app && app.logout()">Sair</a>
+    </nav>
+    </div>
+</header>
+  <main>
+    <section class="container-hr">
+      <h2>Criar / Gerenciar Reservas</h2>
+      <form id="resForm">
+        <input type="hidden" id="resId" name="resId">
+        <label>Hóspede</label>
+        <select id="guestSelect" name="guestSelect"></select>
+        <label>Quarto</label>
+        <select id="roomSelect" name="roomSelect"></select>
+        <label>Check-in</label>
+        <input type="date" id="checkin" name="checkin" required>
+        <label>Check-out</label>
+        <input type="date" id="checkout" name="checkout" required>
+        <div style="margin-top:12px"><button class="btn primary full" type="submit">Salvar reserva</button></div>
+      </form>
+
+      <h3 style="margin-top:18px">Reservas</h3>
+      <div class="card" style="padding:12px;overflow:auto">
+        <table style="width:100%;border-collapse:collapse">
+          <thead><tr><th>ID</th><th>Hóspede</th><th>Quarto</th><th>Check-in</th><th>Check-out</th><th>Ações</th></tr></thead>
+          <tbody id="reservationsBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container-hr">© 2025 Rede Hoteleira</div></footer>
+  <script src="js/app.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', ()=> window.app && window.app.initReservations());</script>
+</body>
+</html>

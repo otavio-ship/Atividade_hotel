@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Grand Palace Hotel — Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container-hr">
+            <div class="brand-inline">
+                <h3 class="brand-name">Grand Palace Hotel</h3>
+                <p class="brand-sm">Conforto e elegância</p>
+            </div>
+            <nav class="main-nav">
+                <a href="home.html" aria-current="page">Início</a>
+                <a href="Quartos.html">Quartos</a>
+                <a href="#sobre">Sobre</a>
+                <a class="btn-link" href="login.html">Entrar</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-home">
+            <div class="container-hr hero-inner">
+                <div>
+                    <h1>Bem-vindo à Grand Palace Hotel</h1>
+                    <p class="muted">Descubra hospedagens cuidadosamente pensadas para sua tranquilidade.</p>
+                    <div class="cta-row">
+                        <button class="btn primary" onclick="location.href='login.html'">Reservar agora</button>
+                        <a class="link" href="rooms.html">Ver quartos</a>
+                    </div>
+                </div>
+                <div class="hero-image"><img src="img/images.jfif" alt="Hotel" style="max-width:260px;border-radius:10px"></div>
+            </div>
+        </section>
+
+      
+    </main>
+
+    <footer class="site-footer">
+        <div class="container-hr">
+            <div>© 2025 Rede Grand Palace hotel</div>
+            <div class="muted">Contato: Hotel@GrandPalace.ex</div>
+        </div>
+    </footer>
+
+    <script>
+        // Pequenas interações da home
+        document.querySelectorAll('.btn-link').forEach(el => el.addEventListener('click', e => { }));
+    </script>
+</body>
+</html>

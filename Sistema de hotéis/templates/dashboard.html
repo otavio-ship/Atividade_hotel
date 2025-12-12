@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Área Restrita — Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container-hr">
+            <div class="brand-inline">
+                <h3 class="brand-name">Dashboard</h3>
+            </div>
+            <nav class="main-nav">
+                <a href="home.html">Início</a>
+                <a href="guests.html">Hóspedes</a>
+                <a href="rooms.html">Quartos</a>
+                <a href="reservas.html">Reservas</a>
+                <button id="logoutBtn" class="btn secondary" onclick="app && app.logout()">Sair</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container-hr">
+            <h2>Bem-vindo, <span id="who"></span></h2>
+            <p class="muted">Área administrativa — recursos simplificados.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container-hr">© 2025 Grand Palace Hotel</div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => window.app && window.app.initDashboard());</script>
+</body>
+
+</html>
